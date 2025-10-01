@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'PufFont';
+    src: url('fonts/puf.otf') format('opentype');
+} 
+
+body {  
+    font-family: 'PufFont', 'Vazirmatn', sans-serif;
+    direction: rtl;  
+    /* پس‌زمینه ساده‌تر و ملایم‌تر */
+    background-color: #fcf8f8; /* کرمی بسیار روشن با ته رنگ صورتی */
+    padding: 25px; /* کمی پدینگ کمتر */
+    color: #88654f; /* رنگ اصلی متن: همان قهوه‌ای/صورتی ملایم */
+    line-height: 1.6; 
+}  
+
+h2, h3 {  
+    color: #88654f; /* رنگ هدر: صورتی پررنگ‌تر */
+    text-align: center; 
+    margin-bottom: 25px;
+    letter-spacing: 1px; /* کمی فاصله بین حروف برای استایل قدیمی‌تر */
+}  
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-container input[type="text"] {
+    padding: 8px 12px; /* پدینگ کمتر */
+    border-radius: 5px; /* گوشه‌های کمی گرد، نه دایره‌ای */
+    border: 1px solid #ffcfe3; /* حاشیه صورتی ملایم */
+    color: #88654f;
+    background: #ffffff; 
+    width: 80%;
+    max-width: 400px;
+    box-shadow: none; /* بدون سایه برجسته */
+    text-align: right; 
+    font-family: 'Vazirmatn', sans-serif; /* فونت Vazirmtn برای ورودی‌ها */
+    font-size: 15px;
+}
+
+.category-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-buttons button {
+    background-color: #ffe7ee; /* پس‌زمینه دکمه‌ها: صورتی خیلی روشن */
+    border: 1px solid #ffcfe3; /* حاشیه برای حالت "قدیمی" */
+    padding: 7px 14px; /* پدینگ کمی کمتر */
+    margin: 4px; /* حاشیه کمتر */
+    border-radius: 5px; /* گوشه‌های کمی گرد */
+    cursor: pointer;
+    font-family: 'PufFont';
+    font-size: 13px; /* فونت کمی کوچکتر */
+    color: #88654f; 
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.category-buttons button.active {
+    background-color: #ffb6c1; /* رنگ دکمه فعال: صورتی بچگانه */
+    color: #fff; 
+    border-color: #ff99aa; /* حاشیه برجسته‌تر */
+    box-shadow: 1px 1px 3px rgba(255, 182, 193, 0.4); /* سایه کوچک برای فعال بودن */
+}
+
+.category-buttons button:hover:not(.active) {
+    background-color: #ffcfe3; /* هاور: صورتی روشن‌تر */
+    border-color: #ffb6c1;
+}
+
+.item {  
+    margin-bottom: 10px; /* حاشیه کمتر بین آیتم‌ها */
+    background: #ffffff;  
+    padding: 10px 15px; 
+    border-radius: 5px; /* گوشه‌های کمی گرد */
+    box-shadow: none; /* بدون سایه برجسته */
+    border: 1px solid #ffedf2; /* حاشیه ملایم‌تر */
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}  
+
+.item label {
+    flex-grow: 1; 
+    margin-left: 10px; 
+}
+
+.controls {  
+    display: flex;  
+    align-items: center;  
+    gap: 3px; /* فاصله کمتر بین دکمه‌های کنترل */
+}  
+
+.controls button {  
+    background-color: #ffe7ee; /* دکمه‌های کنترل: صورتی خیلی روشن */
+    border: 1px solid #ffcfe3; /* حاشیه برای دکمه‌ها */
+    border-radius: 3px; /* گوشه‌های تیزتر */
+    width: 30px; /* ابعاد کوچکتر */
+    height: 30px;  
+    font-size: 18px; /* فونت کمی کوچکتر */
+    cursor: pointer;  
+    line-height: 30px;  
+    text-align: center;  
+    color: #88654f; 
+    transition: background-color 0.2s, border-color 0.2s; 
+}  
+
+.controls button:hover {
+    background-color: #ffcfe3; /* هاور دکمه کنترل: صورتی روشن‌تر */
+    border-color: #ffb6c1;
+}
+
+.controls span {  
+    width: 25px; /* عرض کمتر */
+    display: inline-block;  
+    text-align: center;  
+    font-size: 16px; /* فونت کمی کوچکتر */
+    color: #88654f;
+}  
+
+input[type="number"] { 
+    padding: 7px 10px; /* پدینگ کمتر */
+    border-radius: 5px; /* گوشه‌های کمی گرد */
+    border: 1px solid #ffcfe3;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 15px;
+    color: #88654f;
+    background: #ffffff;
+    width: 80px; /* عرض کمتر */
+    text-align: center;
+}
+
+input[type="checkbox"] { 
+    width: 18px; /* سایز کوچکتر */
+    height: 18px;
+    accent-color: #ffb6c1; 
+    cursor: pointer;
+    border: 1px solid #ffcfe3; /* حاشیه برای چک باکس */
+    border-radius: 3px; /* گوشه‌های تیزتر */
+}
+
+button.calculate {  
+    margin-top: 15px; /* حاشیه کمتر */
+    background-color: #ffe7ee; /* دکمه کپی: صورتی خیلی روشن */
+    border: 1px solid #ffcfe3; /* حاشیه برای دکمه */
+    padding: 10px 22px; 
+    font-size: 14px;  
+    border-radius: 8px;  
+    cursor: pointer;  
+    display: block;  
+    margin-right: auto;  
+    margin-left: auto;  
+    box-shadow: none; /* بدون سایه برجسته */
+    transition: background-color 0.3s, border-color 0.3s;  
+    color: #88654f;  
+    font-family: 'PufFont';
+}  
+
+#invoice {  
+    margin-top: 25px;  
+    background: #ffffff;  
+    padding: 18px; /* پدینگ کمتر */
+    border-radius: 5px; /* گوشه‌های کمی گرد */
+    box-shadow: none; /* بدون سایه برجسته */
+    font-size: 15px; /* فونت کمی کوچکتر */
+    white-space: pre-line;  
+    min-height: 200px; /* ارتفاع کمتر */
+    max-height: 45vh;  
+    width: 100%;  
+    box-sizing: border-box;  
+    border: 1px solid #ffedf2;  
+    resize: vertical;  
+    color: #88654f;
+    line-height: 1.5;
+}
+
+button.copy {  
+    margin-top: 15px; /* حاشیه کمتر */
+    background-color: #ffe7ee; /* دکمه کپی: صورتی خیلی روشن */
+    border: 1px solid #ffcfe3; /* حاشیه برای دکمه */
+    padding: 10px 22px; 
+    font-size: 14px;  
+    border-radius: 8px;  
+    cursor: pointer;  
+    display: block;  
+    margin-right: auto;  
+    margin-left: auto;  
+    box-shadow: none; /* بدون سایه برجسته */
+    transition: background-color 0.3s, border-color 0.3s;  
+    color: #88654f;  
+    font-family: 'PufFont';
+}  
+
+button.copy:hover {  
+    background-color: #ffcfe3; /* هاور دکمه کپی: صورتی روشن‌تر */
+    border-color: #ffb6c1;
+}  
+
+.copied {  
+    text-align: center;  
+    color: #ffb6c1;  
+    font-size: 15px;  
+    margin-top: 8px; /* حاشیه کمتر */
+}

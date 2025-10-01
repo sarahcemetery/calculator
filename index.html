@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✧₊ ⊹ Lost Bunny Calculator ₊ ⊹✧</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-Variable-font-face.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="styles.css"> <script src="https://file.pooftie.me/js/jquery.js"></script>
+<script src="https://middlepot.com/emoji.js"></script>
+</head>  
+<body>  
+  
+  <h2>🗝 Lost Bunny Store 🧸</h2>  
+  
+  <div class="search-container">
+    <input type="text" id="search-input" onkeyup="filterProducts()" placeholder="جستجو...">
+  </div>
+
+  <div class="category-buttons">
+    <button data-category="all" class="active" onclick="filterByCategory('all')">all</button>
+    <button data-category="chokers" onclick="filterByCategory('chokers')">chokers</button>
+    <button data-category="lace-headbands" onclick="filterByCategory('lace-headbands')">lace headdress</button>
+    <button data-category="animals" onclick="filterByCategory('animals')">stuffie</button>
+    <button data-category="bow-clips" onclick="filterByCategory('bow-clips')">bowtie</button>
+  </div>
+
+<div class="item" data-category="chokers">  
+    <label>bunny choker (23 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('choker-bunny', -1)">-</button>  
+      <span id="choker-bunny">0</span>  
+      <button onclick="changeQty('choker-bunny', 1)">+</button>  
+    </div>  
+  </div>  
+    
+  <div class="item" data-category="chokers">  
+    <label>black bowtie choker (26 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('choker-bowtie', -1)">-</button>  
+      <span id="choker-bowtie">0</span>  
+      <button onclick="changeQty('choker-bowtie', 1)">+</button>  
+    </div>  
+  </div>  
+    
+  <div class="item" data-category="chokers">  
+    <label>baby doll choker (60 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('choker-babydoll', -1)">-</button>  
+      <span id="choker-babydoll">0</span>  
+      <button onclick="changeQty('choker-babydoll', 1)">+</button>  
+    </div>  
+  </div> 
+
+  <div class="item" data-category="chokers">  
+    <label>fawn choker (23 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('choker-fawn', -1)">-</button>  
+      <span id="choker-fawn">0</span>  
+      <button onclick="changeQty('choker-fawn', 1)">+</button>  
+    </div>  
+  </div>
+    
+<div class="item" data-category="animals">  
+    <label>bear ears 🧸 (66 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('bear-ears', -1)">-</button>  
+      <span id="bear-ears">0</span>  
+      <button onclick="changeQty('bear-ears', 1)">+</button>  
+    </div>  
+  </div>  
+    
+  <div class="item" data-category="animals">  
+    <label> bunny ears s 🐇 (160 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('bunny-ears-small', -1)">-</button>  
+      <span id="bunny-ears-small">0</span>  
+      <button onclick="changeQty('bunny-ears-small', 1)">+</button>  
+    </div>  
+  </div>  
+    
+  <div class="item" data-category="animals">  
+    <label> bunny ears L 🤍(190 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('bunny-ears-large', -1)">-</button>  
+      <span id="bunny-ears-large">0</span>  
+      <button onclick="changeQty('bunny-ears-large', 1)">+</button>  
+    </div>  
+  </div>  
+  
+  <div class="item" data-category="animals">  
+      <label>kitten ears 🐈 (93 🗝)</label>  
+      <div class="controls">  
+          <button onclick="changeQty('cat-ears', -1)">-</button>  
+          <span id="cat-ears">0</span>  
+          <button onclick="changeQty('cat-ears', 1)">+</button>  
+      </div>  
+  </div>
+
+  <div class="item" data-category="animals">
+    <label>lamb ear 🐑 (190 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('lamb-ears', -1)">-</button>
+      <span id="lamb-ears">0</span>
+      <button onclick="changeQty('lamb-ears', 1)">+</button>
+    </div>
+  </div>
+
+  <div class="item" data-category="animals">
+    <label>puppy hairclip 🍮 (93 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('puppy-hairclip', -1)">-</button>
+      <span id="puppy-hairclip">0</span>
+      <button onclick="changeQty('puppy-hairclip', 1)">+</button>
+    </div>
+  </div>
+
+  <div class="item" data-category="animals">
+    <label>puppy ears set DIY (39 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('puppy-ears-set', -1)">-</button>
+      <span id="puppy-ears-set">0</span>
+      <button onclick="changeQty('puppy-ears-set', 1)">+</button>
+    </div>
+  </div>
+
+<div class="item" data-category="animals">  
+    <label>angel headpiece 🦷 (260 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('headband-angel', -1)">-</button>  
+      <span id="headband-angel">0</span>  
+      <button onclick="changeQty('headband-angel', 1)">+</button>  
+    </div>  
+  </div> 
+
+  <div class="item" data-category="animals">
+    <label> bear headband 🍪 (300 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('bear-headband', -1)">-</button>
+      <span id="bear-headband">0</span>
+      <button onclick="changeQty('bear-headband', 1)">+</button>
+    </div>
+  </div>
+
+  <div class="item" data-category="animals">
+    <label>cat headband 💌 (300 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('headband-cat-princess', -1)">-</button>
+      <span id="headband-cat-princess">0</span>
+      <button onclick="changeQty('headband-cat-princess', 1)">+</button>
+    </div>
+  </div>
+    
+  <div class="item" data-category="lace-headbands">  
+    <label>lace headpiece 🧦 (53 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('headband-lace', -1)">-</button>  
+      <span id="headband-lace">0</span>  
+      <button onclick="changeQty('headband-lace', 1)">+</button>  
+    </div>  
+  </div>  
+    
+  <div class="item" data-category="lace-headbands">  
+    <label>dolly headband 🎗 (70 🗝)</label>  
+    <div class="controls">  
+      <button onclick="changeQty('headband-doll', -1)">-</button>  
+      <span id="headband-doll">0</span>  
+      <button onclick="changeQty('headband-doll', 1)">+</button>  
+    </div>  
+  </div>  
+  
+  <div class="item" data-category="all">
+    <label>little headband 👚 (30 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('little-headband', -1)">-</button>
+      <span id="little-headband">0</span>
+      <button onclick="changeQty('little-headband', 1)">+</button>
+    </div>
+  </div>
+  
+  <div class="item" data-category="lace-headbands">
+    <label>lace cat headband 🔒 (149 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('cat-headband', -1)">-</button>
+      <span id="cat-headband">0</span>
+      <button onclick="changeQty('cat-headband', 1)">+</button>
+    </div>
+  </div>
+
+  <div class="item" data-category="lace-headbands">
+    <label>lace bunny headband 💟(230 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('headband-bunny-doll', -1)">-</button>
+      <span id="headband-bunny-doll">0</span>
+      <button onclick="changeQty('headband-bunny-doll', 1)">+</button>
+    </div>
+  </div>
+
+  <div class="item" data-category="animals">
+    <label>puppy headband 🧷 (150 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('puppy-headband', -1)">-</button>
+      <span id="puppy-headband">0</span>
+      <button onclick="changeQty('puppy-headband', 1)">+</button>
+    </div>
+  </div>
+
+<div class="item" data-category="bow-clips">
+    <label>hime bow 🎀 (77 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('hime-bow', -1)">-</button>
+      <span id="hime-bow">0</span>
+      <button onclick="changeQty('hime-bow', 1)">+</button>
+    </div>
+  </div>
+
+  <div class="item" data-category="bow-clips">
+    <label>stuffie bow pin 🧸 (26 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('stuffie-bow-pin', -1)">-</button>
+      <span id="stuffie-bow-pin">0</span>
+      <button onclick="changeQty('stuffie-bow-pin', 1)">+</button>
+    </div>
+  </div>
+  
+  <div class="item" data-category="bow-clips">
+    <label>bow pin 🎀 (19 🗝)</label>
+    <div class="controls">
+      <button onclick="changeQty('bow-pin', -1)">-</button>
+      <span id="bow-pin">0</span>
+      <button onclick="changeQty('bow-pin', 1)">+</button>
+    </div>
+  </div>
+
+<div class="item">  
+    <label> هزینه پست 👜 (🗝): </label>  
+    <input type="number" id="post-cost" value="0" min="0">  
+  </div>  
+    
+  <div class="item">  
+    <label for="envelope"> پاکت (9 🗝)</label>  
+    <input type="checkbox" id="envelope" data-price="9">  
+  </div>  
+    
+  <div class="item">  
+    <label for="box">باکس (16 🗝)</label>  
+    <input type="checkbox" id="box" data-price="15">  
+  </div>  
+    
+  <button class="calculate" onclick="calculate()">محاسبه ˚｡୨୧˚</button>  
+    
+  
+  <textarea id="invoice" readonly></textarea>  
+    
+  <button class="copy" onclick="copyInvoice()">کپی ♡</button>  
+  <div class="copied" id="copied-message" style="display: none;">!پیام کپی شد ♡</div>  
+    
+  <script>  
+    const products = {  
+      // چوکرها (Chokers)
+      'choker-bunny': {name: 'چوکر بانی', price: 23, category: 'chokers'},  
+      'choker-bowtie': {name: 'چوکر پاپیون مشکی', price: 26, category: 'chokers'},  
+      'choker-babydoll': {name: 'چوکر بیبی دال', price: 60, category: 'chokers'},  
+      'choker-fawn': {name: 'چوکر آهو', price: 23, category: 'chokers'},
+      
+      // گیر مو گوش عروسکی (Stuffie)
+      'bunny-ears-large': {name: 'گوش خرگوشی بزرگ', price: 190, category: 'animals'},
+      'bunny-ears-small': {name: 'گوش خرگوشی کوچیک', price: 160, category: 'animals'},  
+      'lamb-ears': {name: 'گوش بره', price: 190, category: 'animals'},
+      'bear-ears': {name: 'گوش خرسی ', price: 66, category: 'animals'},
+      'cat-ears': {name: 'گیر موی گوش گربه‌ای', price: 93, category: 'animals'},
+      'puppy-hairclip': {name: 'گیر مو هاپو', price: 93, category: 'animals'},
+      'puppy-ears-set': {name: 'بسته گوش هاپویی (DIY)', price: 39, category: 'animals'},
+
+      // هدبند و تل مو (Headdress)
+      'bear-headband': {name: 'هدبند خرسی', price: 300, category: 'animals'},
+      'headband-cat-princess': {name: 'هدبند گربه‌ای پرنسسی', price: 300, category: 'animals'},
+      'headband-angel': {name: 'هدبند فرشته', price: 260, category: 'animals'},  
+      'headband-bunny-doll': {name: 'تل عروسکی خرگوشی', price: 230, category: 'lace-headbands'}, 
+      'cat-headband': {name: 'تل عروسکی گربه‌ای', price: 149, category: 'lace-headbands'}, 
+      'puppy-headband': {name: 'تل هاپویی', price: 150, category: 'animals'},
+      'hime-bow': {name: 'پاپیون پرنسس', price: 77, category: 'bow-clips'}, 
+      'headband-doll': {name: 'تل عروسکی لولیتا', price: 70, category: 'lace-headbands'}, 
+      'headband-lace': {name: 'هدبند توری', price: 53, category: 'lace-headbands'},  
+      'little-headband': {name: 'هدبند عروسک (کوچک)', price: 30, category: 'all'},
+
+      // پاپیون (Bow Clips)
+      'stuffie-bow-pin': {name: 'پاپیون برای عروسک (پین)', price: 26, category: 'bow-clips'},
+      'bow-pin': {name: 'پین پاپیون', price: 19, category: 'bow-clips'}
+    };  
+    
+    let currentCategory = 'all'; 
+    
+    function changeQty(id, change) {  
+      let span = document.getElementById(id);  
+      let current = parseInt(span.innerText);  
+      current += change;  
+      if (current < 0) current = 0;  
+      span.innerText = current;  
+    }  
+    
+    function calculate() {  
+      let invoiceText = ''; 
+      
+      let totalItemsCost = 0;  
+      let hasItems = false; 
+  
+      for (const id in products) {  
+        const qtySpan = document.getElementById(id);
+        if (!qtySpan) continue;
+        const qty = parseInt(qtySpan.innerText);  
+        if (qty > 0) {  
+          hasItems = true;
+          const product = products[id];  
+          const itemTotal = qty * product.price;  
+          
+          let qtyDisplay = '';
+          if (qty > 1) { 
+            qtyDisplay = ` ꒱ ${qty} عدد ꒰`;
+          }
+          invoiceText += `♡ ${product.name}: ${itemTotal} ${qtyDisplay}\n`;  
+          totalItemsCost += itemTotal;  
+        }  
+      }  
+  
+      if (!hasItems) {
+          invoiceText += 'فکر کنم عروسک چیزی انتخاب نکرده... ૮₍ ´• ˕ •` ₎ა\n';
+      }
+      
+      let packagingCost = 0;
+      document.querySelectorAll('input[type=checkbox]').forEach(input => {  
+        if (input.checked && input.getAttribute('data-price')) {  
+          packagingCost += parseInt(input.getAttribute('data-price'));  
+        }  
+      });  
+      const basePostCost = parseInt(document.getElementById('post-cost').value) || 0; 
+      
+      const totalPostCost = basePostCost + packagingCost;
+
+      if (totalPostCost > 0) {
+        invoiceText += `♡ هزینه پست: ${totalPostCost} \n`;
+      }
+
+      let finalTotal = totalItemsCost + totalPostCost;
+
+      invoiceText += `\n🧸 مجموع کل: ${finalTotal}\n`;  
+  
+      document.getElementById('invoice').value = invoiceText;  
+    }  
+    
+    function copyInvoice() {  
+      const invoice = document.getElementById('invoice');  
+      invoice.select();  
+      document.execCommand('copy');  
+      document.getElementById('copied-message').style.display = 'block';  
+      setTimeout(() => {  
+        document.getElementById('copied-message').style.display = 'none';  
+      }, 2000);  
+    }  
+
+    function filterProducts() {
+      const searchInput = document.getElementById('search-input');
+      const searchTerm = searchInput.value.toLowerCase(); 
+      const items = document.querySelectorAll('.item'); 
+
+      items.forEach(item => {
+        const label = item.querySelector('label');
+        const itemCategory = item.getAttribute('data-category'); 
+        
+        const categoryMatch = (currentCategory === 'all' || itemCategory === currentCategory);
+
+        let searchMatch = true;
+        if (label) {
+          const productName = label.textContent.toLowerCase();
+          searchMatch = productName.includes(searchTerm);
+        }
+
+        if (categoryMatch && searchMatch) {
+          item.style.display = 'flex'; 
+        } else {
+          item.style.display = 'none'; 
+        }
+      });
+    }
+
+    function filterByCategory(category) {
+        currentCategory = category; 
+        
+        document.querySelectorAll('.category-buttons button').forEach(button => {
+            if (button.getAttribute('data-category') === category) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        filterProducts(); 
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        filterByCategory('all'); 
+    });
+
+  </script>  
+    <script>loadEmojis();</script>
+</body>  
+</html>
